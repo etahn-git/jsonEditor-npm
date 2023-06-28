@@ -2,7 +2,7 @@ const fs = require('node:fs');
 
 function jsonEditor(jsonDIR, exitBoolean) {
   global.exitBoolean = exitBoolean;
-  global.configJSON = require(jsonDIR);
+  global.configJSON = require('../../' + jsonDIR);
   global.JSONfile = configJSON;
   global.jsonDIR = jsonDIR;
   console.log('jsonEditor Loaded JSON: {' + jsonDIR + '}')
