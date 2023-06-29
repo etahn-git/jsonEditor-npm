@@ -1,11 +1,16 @@
-const fs = require('node:fs');
+const fs = require('fs');
+const path = require('path');
 
 function jsonEditor(jsonDIR, exitBoolean) {
+  const currentModuleDir = path.dirname(require.main.filename);
+  const absoluteJsonDIR = path.resolve(currentModuleDir, jsonDIR);
+
   global.exitBoolean = exitBoolean;
-  global.configJSON = require(jsonDIR);
+  global.configJSON = require(absoluteJsonDIR);
   global.JSONfile = configJSON;
-  global.jsonDIR = jsonDIR;
-  console.log('jsonEditor Loaded JSON: {' + jsonDIR + '}')
+  global.jsonDIR = absoluteJsonDIR;
+  console.log('jsonEditor Loaded JSON: {' + absoluteJsonDIR + '}');
+
 
   return {
     read: (property) => read(property),
