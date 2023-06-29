@@ -1,10 +1,14 @@
 {
   "name": "jsoneditor-npm",
-  "version": "1.2.1",
+  "version": "1.2.2",
   "description": "",
   "main": "jsonEditor.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/etahn-git/jsonEditor-npm"
   },
   "author": "etahn-npm",
   "license": "ISC"
