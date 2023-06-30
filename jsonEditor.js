@@ -9,7 +9,7 @@ function jsonEditor(jsonDIR, exitBoolean) {
   global.configJSON = require(absoluteJsonDIR);
   global.JSONfile = configJSON;
   global.jsonDIR = absoluteJsonDIR;
-  console.log('jsonEditor Loaded JSON: {' + absoluteJsonDIR + '}');
+  console.log('jsonEditor Loaded JSON: "' + absoluteJsonDIR + '"');
 
 
   return {
@@ -18,7 +18,6 @@ function jsonEditor(jsonDIR, exitBoolean) {
     add: (property, value) => add(property, value),
     edit: (property, newValue) => edit(property, newValue),
     createNested: (property) => createNested(property),
-    removeNested: (property) => removeNested(property),
     emptyNested: (property) => emptyNested(property),
     createArray: (property) => createArray(property),
     emptyArray: (property) => emptyArray(property),
